@@ -1,0 +1,685 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #212121;
+}
+
+.container {
+  max-width: 1512px;
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 50px 11px 24px;
+}
+.searchSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.searchSection > a {
+  display: flex;
+  align-items: center;
+}
+.searchBar {
+  display: flex;
+  position: relative;
+}
+.addedSearchBar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 0px 40px;
+}
+.searchBar > input {
+  border: 1px solid #d9d9d9;
+}
+
+.inputLeft {
+  border-radius: 8px 0px 0px 8px;
+  padding: 13px 24px 13px 37px;
+  color: #707070;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+}
+
+.inputRight {
+  padding: 13px 9px 13px 17px;
+}
+
+.searchIcon1 {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+
+.searchIcon2 {
+  padding: 13px 14px;
+  border-radius: 0px 8px 8px 0px;
+  background-color: #f65858;
+  border: none;
+  cursor: pointer;
+}
+
+.searchIcon2 {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.searchIcon2:hover {
+  background: #d83c3c;
+  transform: scale(1);
+}
+
+.navActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+}
+.btnStyles {
+  border: none;
+  background-color: white;
+  color: #212121;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.languageBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.languageSelect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.mainBtnStyles {
+  border-radius: 8px;
+  background-color: #00798a;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mainBtnStyles:hover {
+  background-color: #005f70;
+  transform: scale(1.05);
+}
+
+.navLogStyles {
+  position: relative;
+  display: inline-block;
+  color: #212121;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLogStyles::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #00798a;
+  transition: width 0.3s ease;
+}
+
+.navLogStyles:hover {
+  color: #00798a;
+}
+
+.navLogStyles:hover::after {
+  width: 100%;
+}
+
+.btnStyles {
+  transition: background-color 0.3s ease;
+}
+
+.addedForm {
+  display: none;
+  margin-top: 11px;
+}
+
+@media (max-width: 950px) {
+  nav {
+    padding: 11px 10px;
+  }
+  .searchSection {
+    gap: 10px;
+  }
+  .inputLeft {
+    padding: 13px 0px 13px 0px;
+    text-align: center;
+  }
+  .inputRight {
+    padding: 13px 0px 13px 0px;
+    text-align: center;
+  }
+  .searchIcon1 {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 6px 7px 5px 15px;
+  }
+  .searchBar {
+    display: none;
+  }
+  .addedSearchBar > input {
+    border: 1px solid #d9d9d9;
+  }
+  .searchSection {
+    gap: 6px;
+  }
+  .addedForm {
+    display: flex;
+    justify-content: center;
+  }
+  .inputLeft {
+    padding: 13px 24px 13px 30px;
+    text-align: start;
+  }
+  .searchIcon1 {
+    left: 45px;
+  }
+}
+@media (max-width: 565px) {
+  .addedSearchBar {
+    padding: 0px 20px;
+  }
+  .searchIcon1 {
+    left: 25px;
+  }
+}
+
+@media (max-width: 428px) {
+  .btnStyles {
+    font-size: 12px;
+    line-height: 17.086px;
+  }
+  .navActions {
+    gap: 19px;
+  }
+}
+
+@media (max-width: 375px) {
+  nav {
+    padding: 6px 4px 5px 4px;
+  }
+}
+
+/*===========================main section intro=====================*/
+main {
+  max-width: 1193px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 8px;
+}
+.intro {
+  margin-top: 70px;
+  display: flex;
+  gap: 75px;
+  align-items: center;
+  margin-bottom: 98px;
+  padding: 0px 12px;
+}
+.joinInfo {
+  max-width: 608px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.joinInfo > h1 {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+}
+.joinInfo > p {
+  line-height: 24px;
+}
+.joinBtn {
+  max-width: 125px;
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 0px 8px;
+  }
+  .intro {
+    margin-top: 70px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 833px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  .joinInfo {
+    align-items: center;
+    gap: 20px;
+  }
+  .joinInfo > h1 {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+  }
+  .joinInfo > p {
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .joinInfo > h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 45px;
+  }
+  .joinInfo > p {
+    line-height: 22px;
+  }
+  .intro {
+    margin-bottom: 30px;
+  }
+  .introImg > img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 426px) {
+  .joinInfo > h1 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30.5px;
+  }
+  .joinInfo > p {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .introImg > img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+/*===========================main section events near=====================*/
+
+.eventsNear {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.eventsNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12px;
+}
+
+.eventsLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.eventsLeft > h3 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.locationTag {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 8px;
+  background: rgba(151, 202, 209, 0.12);
+  padding: 11px;
+}
+.locationName {
+  color: #00798a;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.seeAllLink {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 24px;
+  color: #00798a;
+}
+
+@media (max-width: 768px) {
+  .eventsLeft > h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .locationName {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 540px) {
+  .seeAllLink {
+    display: none;
+  }
+  .eventsLeft > h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24.671px;
+  }
+
+  .locationName {
+    font-size: 13.706px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16.447px;
+  }
+}
+
+@media (max-width: 425px) {
+  .eventsLeft {
+    gap: 13px;
+  }
+}
+
+@media (max-width: 329px) {
+  .eventsNavigation {
+    padding: 0px 7px;
+  }
+}
+
+.eventsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 27px;
+  row-gap: 36px;
+  justify-content: center;
+  padding: 0px 12px;
+}
+.eventsElements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.eventsElements:hover .eventTitle {
+  color: #00798a;
+}
+
+.eventsElements:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.cardsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.eventImageStyles {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.eventTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  max-width: 85%;
+}
+.eventDistance {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.eventDate {
+  display: flex;
+  gap: 6px;
+}
+.eventDateInfo {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.35px;
+  text-transform: uppercase;
+}
+.eventTickets {
+  display: flex;
+  gap: 15.8px;
+}
+.eventPeople {
+  display: flex;
+  gap: 6px;
+}
+.eventVisitors {
+  line-height: 24px;
+}
+.eventTicketInfo {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.ticketStatus {
+  line-height: 24px;
+}
+.onlineEvent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  display: none;
+}
+.onlineText {
+  color: #707070;
+  font-size: 7.299px;
+  font-weight: 500;
+  line-height: 9.732px;
+}
+
+.attendees {
+  color: #707070;
+  font-size: 8.437px;
+  font-weight: 400;
+  line-height: 12.053px;
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .eventsList {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 36px;
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 792px) {
+  .eventsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px 0px 0px 7px;
+  }
+
+  .eventsElements {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 0.613px solid #d9d9d9;
+  }
+  .cardsInfo {
+    padding: 0px 10px 30px 0px;
+    gap: 3px;
+  }
+
+  .eventImageStyles {
+    width: 40%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .eventContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .eventTitle {
+    font-size: 13px;
+    line-height: 16px;
+    max-width: 100%;
+  }
+
+  .eventTickets {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .eventDate > img,
+  .eventPeople > img,
+  .eventTicketInfo > img {
+    width: 20px;
+    height: 20px;
+  }
+  .eventTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  .eventDateInfo {
+    font-size: 12px;
+  }
+  .eventPeople {
+    font-size: 12px;
+  }
+  .ticketStatus {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 426px) {
+  .eventsElements:nth-child(1),
+  .eventsElements:nth-child(5),
+  .eventsElements:nth-child(6),
+  .eventsElements:nth-child(7),
+  .eventsElements:nth-child(8) {
+    display: none;
+  }
+  .eventDate > img {
+    display: none;
+  }
+
+  .eventDateInfo {
+    order: 1;
+    color: #7c6f50;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12.257px;
+  }
+  .eventTitle {
+    order: 2;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14.464px;
+  }
+  .eventDistance {
+    order: 3;
+    color: #707070;
+    font-size: 8.437px;
+    line-height: 12.053px;
+  }
+  .eventTickets {
+    display: none;
+  }
+  .onlineEvent {
+    display: flex;
+    order: 4;
+  }
+  .attendees {
+    display: flex;
+    order: 5;
+    padding-top: 18px;
+  }
+}
+@media (max-width: 392px) {
+  .eventImageStyles {
+    max-width: 98px;
+  }
+  .cardsInfo {
+    padding: 0px 10px 20px 0px;
+    gap: 3px;
+  }
+  .attendees {
+    padding-top: 16px;
+  }
+  .intro {
+    margin-bottom: 20px;
+  }
+  .eventsNear {
+    gap: 12px;
+  }
+  .locationTag > img {
+    width: 15px;
+    height: 15px;
+  }
+}
