@@ -9,7 +9,7 @@ html {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 24px;
   color: #212121;
 }
 
@@ -242,7 +242,7 @@ main {
   max-width: 1193px;
   width: 100%;
   margin: 0 auto;
-  padding: 0px 8px;
+  padding: 0px 12px;
 }
 .intro {
   margin-top: 70px;
@@ -273,9 +273,6 @@ main {
 }
 
 @media (max-width: 1024px) {
-  main {
-    padding: 0px 8px;
-  }
   .intro {
     margin-top: 70px;
     gap: 50px;
@@ -359,7 +356,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0px 12px 0px 0px;
 }
 
 .eventsLeft {
@@ -373,6 +370,7 @@ main {
   font-style: normal;
   font-weight: 600;
   line-height: 36px;
+  /* padding-left: 12px; */
 }
 
 .locationTag {
@@ -439,10 +437,12 @@ main {
   }
 }
 
+/*-------------------------------- event cards section  ------------------------------- */
+
 .eventsList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  column-gap: 27px;
+  column-gap: 24px;
   row-gap: 36px;
   justify-content: center;
   padding: 0px 12px;
@@ -876,6 +876,11 @@ main {
     margin-bottom: 34px;
   }
 }
+@media (max-width: 394px) {
+  .joinMeetupBlock {
+    margin-bottom: 20px;
+  }
+}
 
 /*==============================explore categories section==============================*/
 
@@ -986,5 +991,534 @@ main {
 @media (max-width: 321px) {
   .topCategoriesBlock > ul {
     gap: 10px;
+  }
+}
+
+/*-------------------------------- popular cities section  ------------------------------- */
+
+.cities {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.cities > p {
+  color: #707070;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.citiesCards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin-top: 10px;
+  padding: 0px 0px 0px 12px;
+}
+
+.cityElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #212121;
+}
+
+.cityElement img {
+  width: 100%;
+  max-width: 205px;
+  min-width: 153px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.citiesName {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.cityElement:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+@media (max-width: 1024px) {
+  .citiesCards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 5%;
+  }
+
+  .cityElement:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .citiesCards {
+    gap: 17px;
+    padding: 0;
+  }
+  .cities > p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .citiesName {
+    font-size: 15.024px;
+    font-weight: 600;
+    line-height: 21.034px;
+  }
+}
+@media (max-width: 394px) {
+  .citiesCards {
+    padding: 0px 23px;
+  }
+}
+
+@media (max-width: 375px) {
+  .cities {
+    padding: 0px 8px;
+  }
+  .cityElement img {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 394px) {
+  .citiesCards {
+    padding: 0px 10px;
+  }
+}
+
+/*-------------------------------- how section  ------------------------------- */
+
+.howMeetupBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.howInfos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.howDiscover {
+  border-radius: 8px;
+  background: rgba(151, 202, 209, 0.08);
+  display: flex;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+  padding: 20px;
+  gap: 24px;
+}
+
+.howDiscover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.howDiscover > img {
+  max-width: 41px;
+  max-height: 41px;
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.howDiscover:hover > img {
+  transform: rotate(1deg) scale(1.1);
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.howDiscoverInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.howDiscoverInfos > h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.howDiscoverInfos > a {
+  font-size: 15px;
+  display: inline-block;
+  word-break: break-word;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  color: #006d7e;
+}
+
+.howDiscoverInfos > a:hover {
+  color: #004e5a;
+  transform: translateY(-1px) scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .howDiscover {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    gap: 20px;
+  }
+
+  .howDiscoverInfos > h4 {
+    font-size: 18px;
+  }
+
+  .howDiscoverInfos > a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .howDiscover {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: clamp(1rem, 4vw, 1.25rem);
+    gap: 16px;
+  }
+
+  .howDiscover > img {
+    margin: 0;
+  }
+
+  .howDiscoverInfos > h4 {
+    font-size: 16px;
+  }
+
+  .howDiscoverInfos > a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 426px) {
+  .howMeetupBlock {
+    margin-bottom: 20px;
+  }
+  .howDiscover {
+    padding: 18px 12px;
+  }
+}
+
+/*-------------------------------- friendships section  ------------------------------- */
+
+.friendships {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.friendships > p {
+  color: #707070;
+  max-width: 850px;
+}
+
+.friendshipsCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.friendshipsElements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 280px;
+  max-width: 376px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.friendshipsElements:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.friendshipsElements img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.friendshipsElements > h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  max-width: 85%;
+}
+
+.friendshipsElements > p {
+  color: #707070;
+  max-width: 95%;
+}
+
+.friendshipsElements a {
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.friendshipsElements a:hover {
+  color: #004e5a;
+}
+
+@media (max-width: 1024px) {
+  .friendshipsCards {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .friendshipsElements {
+    max-width: 100%;
+  }
+
+  .friendshipsElements img {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .friendships > p {
+    font-size: 14px;
+  }
+
+  .friendshipsElements > h4 {
+    font-size: 16px;
+  }
+
+  .friendshipsElements > p {
+    font-size: 14px;
+  }
+
+  .friendshipsElements a {
+    font-size: 14px;
+  }
+
+  .friendshipsCards {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 426px) {
+  .friendships {
+    gap: 0px;
+  }
+  .friendships > p {
+    display: none;
+  }
+  .friendshipsElements > p {
+    font-size: 12px;
+  }
+  .friendshipsElements a {
+    font-size: 12px;
+  }
+  .friendshipsElements {
+    margin-bottom: 0px;
+  }
+}
+
+/*=============================== Foooter =========================*/
+
+footer {
+  background-color: #212121;
+}
+
+.footerContainer {
+  padding: 24px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footerStarted {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 25px;
+}
+.footerStarted > a {
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  padding: 10px 13.8px 10px 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.footerStarted > a:hover {
+  background-color: #fff;
+  color: #212121;
+  transform: scale(1.05);
+}
+
+.footerStarted > a:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+.footerLists {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.footerListsStyle {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1 1 180px;
+  min-width: 100px;
+}
+.footerListTitle {
+  color: #f6f7f8;
+  font-weight: 600;
+}
+.footerListStyles {
+  color: #c5c4c4;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.footerListStyles:hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.socialmedias {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialmediasIcons a img {
+  transition: transform 0.3s ease;
+}
+
+.socialmediasIcons a:hover img {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.followBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.followBlock > p {
+  color: #f6f7f8;
+}
+.socialmediasIcons {
+  display: flex;
+  gap: 32px;
+}
+.downloadApps {
+  display: flex;
+  gap: 24px;
+}
+
+.footerSettings {
+  display: flex;
+  gap: 26px;
+}
+
+.footerSettings li:first-child a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+@media (max-width: 808px) {
+  .footerSettingsList {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .footerStarted {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 630px) {
+  .downloadApps {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .footerContainer {
+    padding: 20px 7px 36px 12px;
+    gap: 24px;
+  }
+  .footerLists {
+    gap: 15px;
+  }
+  .footerStarted {
+    gap: 20px;
+  }
+}
+@media (max-width: 394px) {
+  .friendships {
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 376px) {
+  .footerStarted {
+    flex-direction: column;
+  }
+  .footerLists {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 321px) {
+  .footerLists {
+    gap: 3px;
+  }
+  .footerListStyles {
+    text-align: center;
   }
 }
