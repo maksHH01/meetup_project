@@ -74,11 +74,9 @@ nav {
   background-color: #f65858;
   border: none;
   cursor: pointer;
-}
-
-.searchIcon2 {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .searchIcon2:hover {
   background: #d83c3c;
   transform: scale(1);
@@ -100,6 +98,7 @@ nav {
   line-height: 20px;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .languageBtn {
@@ -159,10 +158,6 @@ nav {
 
 .navLogStyles:hover::after {
   width: 100%;
-}
-
-.btnStyles {
-  transition: background-color 0.3s ease;
 }
 
 .addedForm {
@@ -357,7 +352,7 @@ main {
 .eventsNear {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .eventsNavigation {
@@ -372,7 +367,8 @@ main {
   align-items: center;
   gap: 20px;
 }
-.eventsLeft > h3 {
+
+.allTitleStyles {
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -401,7 +397,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  .eventsLeft > h3 {
+  .allTitleStyles {
     font-size: 22px;
     line-height: 30px;
   }
@@ -416,7 +412,7 @@ main {
   .seeAllLink {
     display: none;
   }
-  .eventsLeft > h3 {
+  .allTitleStyles {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -457,6 +453,7 @@ main {
   gap: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 .eventsElements:hover .eventTitle {
   color: #00798a;
@@ -478,6 +475,27 @@ main {
   height: auto;
   object-fit: cover;
 }
+
+.cameraLogoEvents {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 2px 7.8px 2px 4px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.cameraLogoEvents > p {
+  color: #707070;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
 .eventTitle {
   font-size: 20px;
   font-weight: 600;
@@ -547,6 +565,10 @@ main {
     gap: 36px;
     padding: 0px 30px;
   }
+  .eventImageStyles {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 792px) {
@@ -615,6 +637,10 @@ main {
   .ticketStatus {
     font-size: 12px;
   }
+  .cameraLogoEvents {
+    top: 25px;
+    left: 6px;
+  }
 }
 
 @media (max-width: 426px) {
@@ -627,6 +653,14 @@ main {
   }
   .eventDate > img {
     display: none;
+  }
+
+  .eventImageStyles {
+    padding-bottom: 10px;
+  }
+
+  .eventsNavigation {
+    padding: 0px 6px;
   }
 
   .eventDateInfo {
@@ -660,8 +694,14 @@ main {
     order: 5;
     padding-top: 18px;
   }
+  .cameraLogoEvents {
+    display: none;
+  }
 }
 @media (max-width: 392px) {
+  .eventsElements {
+    padding-top: 10px;
+  }
   .eventImageStyles {
     max-width: 98px;
   }
@@ -681,5 +721,270 @@ main {
   .locationTag > img {
     width: 15px;
     height: 15px;
+  }
+  .inputLeft {
+    padding: 11px 24px 11px 30px;
+  }
+}
+
+/*=========================== Section Upcoming events ==================*/
+
+.upcomingEventsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+.upcomingAll {
+  display: block;
+}
+
+@media (max-width: 426px) {
+  .seeAllLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .seeAllLink {
+    display: none;
+  }
+}
+
+/*=============================Join Meetup section ========================*/
+
+.joinMeetupBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 56px;
+  background: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  margin: 40px 0;
+  gap: 75px;
+}
+
+.meetupInfo {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "text"
+    "button";
+  gap: 16px;
+}
+
+.allTitleStyles {
+  grid-area: title;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.meetupInfo > p {
+  grid-area: text;
+  line-height: 24px;
+}
+
+.meetUpBtn {
+  grid-area: button;
+  background-color: #e32359;
+  color: #fff;
+  padding: 8px 60px;
+  font-weight: 500;
+  line-height: 24px;
+  max-width: 192px;
+  margin-bottom: 20px;
+}
+
+.desktopImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.mobileImage {
+  display: none;
+  grid-area: image;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  justify-self: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 1024px) {
+  .joinMeetupBlock {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .joinMeetupBlock {
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .allTitleStyles,
+  .meetupInfo > p {
+    text-align: start;
+  }
+
+  .allTitleStyles {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .meetUpBtn {
+    justify-self: center;
+  }
+
+  .meetupInfo {
+    text-align: center;
+    grid-template-areas:
+      "title"
+      "image"
+      "text"
+      "button";
+  }
+  .mobileImage {
+    display: flex;
+    max-width: 290px;
+  }
+}
+
+@media (max-width: 426px) {
+  .joinMeetupBlock {
+    padding: 16px 27px 0px 15px;
+    margin-top: 20px;
+  }
+  .mobileImage {
+    padding: 0;
+  }
+  .meetupInfo {
+    gap: 0px;
+  }
+  .meetupInfo > p {
+    margin: 6px 0px 22px 0px;
+    font-size: 13px;
+  }
+  .meetUpBtn {
+    margin-bottom: 34px;
+  }
+}
+
+/*==============================explore categories section==============================*/
+
+.topCategoriesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 56px;
+  padding-top: 40px;
+}
+
+.topCategoriesBlock > ul {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.topCategoriesBlock > ul > li {
+  display: flex;
+  min-width: 135px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(151, 202, 209, 0.08);
+  padding: 22px 28px 16px;
+  gap: 6px;
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 calc(25% - 16px);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.topCategoriesBlock > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(151, 202, 209, 0.12);
+}
+
+.topCategoriesBlock > ul > li:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.topCategoriesBlock > ul > li:focus-visible {
+  outline: 2px solid #97cad1;
+  outline-offset: 4px;
+}
+
+.topCategoriesBlock > ul > li > p {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media (max-width: 1440px) {
+  .topCategoriesBlock > ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topCategoriesBlock {
+    padding: 0px 12px;
+  }
+  .topCategoriesBlock > ul > li {
+    flex: 1 1 calc(33.333% - 16px);
+  }
+  .topCategoriesBlock > ul {
+    margin: 0px 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .topCategoriesBlock > ul > li {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (max-width: 425px) {
+  .topCategoriesBlock > ul > li {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .topCategoriesBlock > ul > li {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (max-width: 394px) {
+  .topCategoriesBlock > ul {
+    margin: 0px 5px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .topCategoriesBlock > ul {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 321px) {
+  .topCategoriesBlock > ul {
+    gap: 10px;
   }
 }
