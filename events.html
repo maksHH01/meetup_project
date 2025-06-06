@@ -1,1 +1,262 @@
-hoo
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="searchSection">
+          <a href="index.html"
+            ><img src="svg_icons/meetup_logo.svg" alt="mainLogo"
+          /></a>
+          <form action="#" class="searchBar">
+            <input
+              class="inputLeft"
+              type="text"
+              placeholder="Search events"
+              name="search_input"
+            />
+            <img
+              class="searchIcon1"
+              src="svg_icons/search_grey.svg"
+              alt="search"
+            />
+            <input
+              class="inputRight"
+              type="text"
+              value="Mountain View, CA"
+              name="search_input"
+            />
+            <button class="searchIcon2">
+              <img src="svg_icons/search_white.svg" alt="search_icon" />
+            </button>
+          </form>
+        </div>
+        <div class="navActions">
+          <div class="languageBtn">
+            <img src="svg_icons/planet_logo.svg" alt="language_icon" />
+            <a class="languageSelect btnStyles navLogStyles" href="#"
+              >English</a
+            >
+          </div>
+          <a href="#" class="btnStyles navLogStyles">Log in</a>
+          <button class="mainBtnStyles btnStyles" type="button">Sign up</button>
+        </div>
+      </nav>
+      <div class="addedForm">
+        <form action="#" class="addedSearchBar">
+          <input
+            class="inputLeft"
+            type="text"
+            placeholder="Search events"
+            name="search_input"
+          />
+          <img
+            class="searchIcon1"
+            src="svg_icons/search_grey.svg"
+            alt="search"
+          />
+          <button class="searchIcon2">
+            <img src="svg_icons/search_white.svg" alt="search_icon" />
+          </button>
+        </form>
+      </div>
+      <main>
+        <div class="eventNewYorkBlock">
+          <div class="eventNewYorkAbout">
+            <h3 class="allTitleStyles">Events near New York, NY</h3>
+            <p class="sectionLabel">Events</p>
+            <form class="filtersForm">
+              <div class="selectList">
+                <select class="mySelect selectType">
+                  <option disabled selected>Any type</option>
+                  <option>online</option>
+                  <option>offline</option>
+                </select>
+                <select class="mySelect selectDistance">
+                  <option disabled selected>Any distance</option>
+                  <option>50</option>
+                  <option>25</option>
+                  <option>10</option>
+                  <option>100</option>
+                  <option>74</option>
+                  <option>15</option>
+                </select>
+                <select class="mySelect selectCategory">
+                  <option disabled selected>Any category</option>
+                  <option>Hobbies and Passions</option>
+                  <option>Technology</option>
+                  <option>Business</option>
+                  <option>Social Activities</option>
+                  <option>Health and Wellbeing</option>
+                </select>
+              </div>
+            </form>
+            <div class="filtredEvents eventsList"></div>
+          </div>
+          <div class="map">
+            <p>Find events near</p>
+            <h4>New York, NY</h4>
+            <div class="mapContainer">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=..."
+                width="100%"
+                height="300"
+                style="border: 0; border-radius: 12px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+              <div class="mapOverlay"></div>
+              <a
+                href="https://www.google.com/maps/place/New+York,+NY"
+                target="_blank"
+              >
+                Browse in map
+              </a>
+              <img src="svg_icons/mapclose.svg" alt="close map icon" />
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footerContainer">
+          <div class="footerStarted">
+            <p class="footerListTitle">Create your own Meetup group.</p>
+            <a role="button" href="#">Get Started</a>
+          </div>
+          <div class="footerLists">
+            <ul class="footerListsStyle">
+              <li class="footerListTitle">Your Account</li>
+              <li><a class="footerListStyles" href="#">Sign up</a></li>
+              <li><a class="footerListStyles" href="#">Log in</a></li>
+              <li><a class="footerListStyles" href="#">Help</a></li>
+              <li>
+                <a class="footerListStyles" href="#">Become an Affiliate</a>
+              </li>
+            </ul>
+            <ul class="footerListsStyle">
+              <li class="footerListTitle">Discover</li>
+              <li><a class="footerListStyles" href="#">Groups</a></li>
+              <li><a class="footerListStyles" href="#">Calendar</a></li>
+              <li><a class="footerListStyles" href="#">Topics</a></li>
+              <li>
+                <a class="footerListStyles" href="#">Cities</a>
+              </li>
+              <li><a class="footerListStyles" href="#">Online Events</a></li>
+              <li><a class="footerListStyles" href="#">Local Guides</a></li>
+              <li><a class="footerListStyles" href="#">Make Friends</a></li>
+            </ul>
+            <ul class="footerListsStyle">
+              <li class="footerListTitle">Meetup</li>
+              <li><a class="footerListStyles" href="#">About</a></li>
+              <li><a class="footerListStyles" href="#">Blog</a></li>
+              <li><a class="footerListStyles" href="#">Meetup Pro</a></li>
+              <li>
+                <a class="footerListStyles" href="#">Careers</a>
+              </li>
+              <li><a class="footerListStyles" href="#">Apps</a></li>
+              <li><a class="footerListStyles" href="#">Podcast</a></li>
+            </ul>
+          </div>
+          <div class="socialmedias">
+            <div class="followBlock">
+              <p>Follow us</p>
+              <div class="socialmediasIcons">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <img src="svg_icons/facebook.svg" alt="facebook icon" />
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  aria-label="Twitter"
+                >
+                  <img src="svg_icons/tritter.svg" alt="twitter icon" />
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  aria-label="YouTube"
+                >
+                  <img src="svg_icons/youtube.svg" alt="youtube icon" />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <img src="svg_icons/instagram.svg" alt="instagram icon" />
+                </a>
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  aria-label="TikTok"
+                >
+                  <img src="svg_icons/tiktok.svg" alt="tiktok icon" />
+                </a>
+              </div>
+            </div>
+            <div class="downloadApps">
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="svg_icons/google_play.svg" alt="Google Play icon" />
+              </a>
+              <a
+                href="https://www.apple.com/app-store/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="svg_icons/apple.svg" alt="Apple Store icon" />
+              </a>
+            </div>
+          </div>
+          <ul class="footerSettings">
+            <li><a href="#">© 2024 Meetup</a></li>
+            <li>
+              <a class="footerListStyles footerSettingsList" href="#"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a class="footerListStyles footerSettingsList" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="footerListStyles footerSettingsList" href="#"
+                >Do Not Sell or Share My Personal Data</a
+              >
+            </li>
+            <li>
+              <a class="footerListStyles footerSettingsList" href="#"
+                >Cookie Policy</a
+              >
+            </li>
+            <li>
+              <a class="footerListStyles footerSettingsList" href="#">Help</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
