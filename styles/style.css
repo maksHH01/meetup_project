@@ -1585,7 +1585,7 @@ footer {
 
 @media (max-width: 426px) {
   .footerContainer {
-    padding: 20px 7px 36px 12px;
+    padding: 20px 12px 36px 12px;
     gap: 24px;
   }
   .footerLists {
@@ -1662,7 +1662,7 @@ footer {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
   max-width: 148px;
   text-align: center;
