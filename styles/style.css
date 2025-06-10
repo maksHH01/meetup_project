@@ -226,7 +226,7 @@ nav {
     padding: 0px 20px;
   }
   .searchIcon1 {
-    left: 25px;
+    left: 23px;
   }
 }
 
@@ -237,6 +237,10 @@ nav {
   }
   .navActions {
     gap: 19px;
+  }
+  .addedSearchBar {
+    padding: 0px 20px 0px 12px;
+    max-height: 42px;
   }
 }
 
@@ -1642,6 +1646,8 @@ footer {
   display: flex;
   gap: 17px;
   margin-bottom: 50px;
+  padding-bottom: 10px;
+  padding-top: 2px;
 }
 .mySelect {
   appearance: none;
@@ -1665,7 +1671,6 @@ footer {
 
 .mySelect:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mapContainer {
@@ -1765,12 +1770,21 @@ footer {
   }
 }
 
+@media (max-width: 601px) {
+  .selectList {
+    overflow: scroll;
+  }
+}
+
 @media (max-width: 453px) {
   .filteredCardsInfo {
     gap: 4px;
   }
   .filteredEventTitle {
     font-size: 16px;
+  }
+  .selectList {
+    overflow: scroll;
   }
 }
 
@@ -1806,6 +1820,9 @@ footer {
   }
   .filtredCameraLogoEvents {
     display: none;
+  }
+  .selectList {
+    margin-bottom: 18px;
   }
 }
 

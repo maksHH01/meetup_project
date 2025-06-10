@@ -1,5 +1,6 @@
 const filtredEvents = document.querySelector(".filtredEvents");
 
+const selectDate = document.querySelector(".selectDate");
 const selectType = document.querySelector(".selectType");
 const selectDistance = document.querySelector(".selectDistance");
 const selectCategory = document.querySelector(".selectCategory");
@@ -72,10 +73,10 @@ const eventsStore = [
   },
 ];
 
-function eventsRender() {
+function eventsRender(eventsArray) {
   filtredEvents.innerHTML = "";
 
-  eventsStore.forEach((event) => {
+  eventsArray.forEach((event) => {
     const newElement = document.createElement("div");
     newElement.classList.add("filtredEventsElements");
 
@@ -145,5 +146,40 @@ function eventsRender() {
     filtredEvents.append(newElement);
   });
 }
+eventsRender(eventsStore);
 
-eventsRender();
+/*========================filters==================*/
+
+[selectDate, selectType, selectDistance, selectCategory].forEach((event) => {
+  event.addEventListener("change", filterEvents);
+});
+
+function filterEvents() {
+  const selectedDate = selectDate.value;
+  const selectedType = selectType.value;
+  const selectedDistance = selectDistance.value;
+  const selectedCategory = selectCategory.value;
+
+  let filtered = eventsStore;
+
+  if (selectedDate !== "Any date" && selectedDate !== "") {
+    filtered = filtered.filter((event) => {
+      const eventDateStr = event.date.toISOString().split("T")[0];
+      return eventDateStr === selectedDate;
+    });
+  }
+
+  if (selectedType !== "Any type") {
+    filtered = filtered.filter((event) => event.type === selectedType);
+  }
+
+  if (selectedDistance !== "Any distance") {
+    const numDistance = parseInt(selectedDistance);
+    filtered = filtered.filter((event) => event.distance <= numDistance);
+  }
+  if (selectedCategory !== "Any category") {
+    filtered = filtered.filter((event) => event.category === selectedCategory);
+  }
+
+  eventsRender(filtered);
+}
