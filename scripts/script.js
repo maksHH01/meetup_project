@@ -74,6 +74,7 @@ const eventsStore = [
 ];
 
 function eventsRender(eventsArray) {
+  if (!filtredEvents) return;
   filtredEvents.innerHTML = "";
 
   eventsArray.forEach((event) => {
